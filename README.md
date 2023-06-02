@@ -216,3 +216,80 @@ Introduction
 
 
 
+
+
+
+
+
+
+=> What is bean ?
+	= Beans are the objects that form the the backbone of our application which is managed by the Spring Container
+	= Beans are created with the configuration details/metadata that we provide to the container i.e. in the spring configuration file i.e. applicationContext.xml <bean/> 
+	= Beans defination contains the configuration details in 3 parts :-
+		1. Beans Creation :-
+			<bean id="--" class="--" name="--" scope="--"/>
+		2. Beans LifeCycle :-
+			lazy-init="---", init-method="--", destroy-method="--"
+		3. Beans Dependencies :- (attibutes which provides information how to inject the dependencies)
+			properties, constructor-arg, autowiring mode
+			
+	= for example :-
+		<bean id="bean unique identity" class="fully qualified class name">
+			<propery name="--" value="--" />
+		</bean>
+		
+=======================================================================================================
+
+=> id attribute :
+	= It specifies the bean unique identity
+	
+=> name attribute :-
+	= It specifies the bean unique identity but it is more flexible as compared to id attribute
+	
+	= name attribute provides the flexibility to provide multiple names for one bean object
+	= We can separate the multiple bean names by comma(,) or semi-colon(;) or space
+	= We can provide same name to one bean object but same name cannot be provided to multiple bean objects
+	= We can provide same bean name as that of id
+	
+=======================================================================================================
+
+=> scope attribute :-
+	= scope of the bean defines the life-cycle and visibility/accessbility of that bean in the context we use it
+	= There are 7 types of scopes of bean object :-
+		1. "singleton" scope
+		2. "prototype" scope
+		
+		3. "request" scope
+		4. "session" scope
+		5. "globalSession" scope
+		6. "application" scope
+		7. "webSocket" scope
+		
+	= NOTE : We can provide custom scope to the bean objects
+	
+=======================================================================================================
+
+=> "singleton" scope :-
+	= In this scope only one instance will be created for a single bean defination and the same object will be shared for each request made for that bean using getBean(-) method
+	= It is the default scope of bean object
+	
+=> "prototype" scope :-
+	= In this scope a new instance is created for a single bean defination, when we request for bean using getBean(-) method, it willl return new bean instance
+	
+=======================================================================================================
+single_bean_defination_object
+
+<img width="575" alt="image" src="https://github.com/Nishita-Maheshwari/SpringCore/assets/47790697/e891dd19-e6ba-4e24-a3f1-5b6d060d99df">
+
+
+multiple_bean_defination_object
+
+
+<img width="569" alt="image" src="https://github.com/Nishita-Maheshwari/SpringCore/assets/47790697/aa9eb54f-7135-4579-b31c-a3815393c727">
+
+
+
+
+
+
+

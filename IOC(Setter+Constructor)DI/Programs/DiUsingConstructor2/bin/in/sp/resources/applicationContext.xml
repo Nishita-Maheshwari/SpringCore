@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="student1" class="in.sp.beans.Student" >
+        	<constructor-arg value="Deepak" />
+        	<constructor-arg value="101" />
+        </bean>
+        
+        <bean id="student2" class="in.sp.beans.Student" >
+        	<constructor-arg value="Deepak" />
+        	<constructor-arg value="101" />
+        	<constructor-arg value="91.3" />
+        </bean>
+           
+</beans>

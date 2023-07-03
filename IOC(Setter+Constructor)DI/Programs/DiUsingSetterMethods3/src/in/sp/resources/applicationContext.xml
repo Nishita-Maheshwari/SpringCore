@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+       <bean id="sub" class="in.sp.beans.Subjects" >
+       		<property name="subjects">
+       			<list>
+       				<value> Math </value>
+       				<value> Science </value>
+       				<value> Chemestry </value>
+       			</list>
+       		</property>
+       </bean>
+        
+        <bean id="student" class="in.sp.beans.Student" >
+        	<property name="name" value="Deepak" />
+        	<property name="rollno" value="101" />
+        	<property name="marks" value="87.5" />
+        	<property name="subj" ref="sub" />
+        </bean>
+           
+</beans>

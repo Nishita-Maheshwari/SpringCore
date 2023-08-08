@@ -174,6 +174,73 @@ Introduction
 		4. ByteArrayResource
 		5. FileSystemResource
 		6. ServletContextResource
+
+
+
+  #  What is Spring Container (IoC Container) ?	
+	= The Spring Container is the core or say heart of the Spring Framework
+	= It can be compared as :
+		- Like JVM which is used to run Java Programs
+		- Like servlet container which is used to run servlets
+		- Like EJB container which provides the run-time environment for enterprise beans
+		- Same Spring container is the place where bean objects are managed
+		
+	= The main responsibilites of Spring container are :-
+		1. It is used to instantiate, initialize and wire up the bean objects
+		2. It manages the bean life cycle
+		
+	= Types of Spring Containers ?
+		1. BeanFactory Container
+		2. ApplicationContext Container
+		
+	= Working of Spring Container :-
+		
+		
+
+
+=> Working of BeanFactory container :-
+	
+	
+
+
+#  ApplicationContext Container :-
+	= ApplicationContext is also a Spring Container that contains the collection of bean objects
+	= It is advanced level spring container as compared to BeanFactory
+	
+	= ApplicationContext is used to create bean objects, then initialize the bean and return
+                  it whenever asked by client/user (it has many more extra working as compared to BeanFactory)
+	
+	= ApplicationContext is an interface which is present in "org.springframework.context" package
+	= ApplicationContext inherits BeanFactory interface (indirectly)
+	
+	
+=> Hierarchy of Spring Containers :-
+
+
+=> Working of ApplicationContext :-
+	
+
+ # Difference between BeanFactory and ApplicationContext :-
+	1. BeanFactory is the fundamental spring container
+	   ApplicationContext is an advanced container which provides all the functionalities of BeanFactory with additional features
+	2. BeanFactory will create the bean object when we call getBean(-) method and thus it is known as 
+	   "Lazy Initialization"
+	   ApplicationContext will create the bean object at the time of startup and thus it is known as "Eager Initialization"
+	3. BeanFactory is suitable for Standalone Applications
+	   ApplicationContext is suitable for Enterprise Applications
+	4. BeanFactory supports only Singleton and Prototype bean scope
+	   ApplicationContext supports all the bean scopes i.e. Singleton, Prototype, Request, Session etc
+	5. BeanFactory does not support I18N functionality
+	   ApplicationContext supports I18N functionality
+	6. BeanFactory does not support AOP module and ORM
+	   ApplicationContext supports AOP module and ORM
+	7. BeanFactory does not support Annotation. Thus in bean autowiring we have to provide the 
+	   configurations in XML file only
+	   ApplicationContext supports Annotation
+	   
+
+
+
 		
 		
 # => BeanFactory :-
@@ -521,70 +588,6 @@ class Test
 
 
 
-
-
-
-=> What is Spring Container (IoC Container) ?
-	= The Spring Container is the core or say heart of the Spring Framework
-	= It can be compared as :
-		- Like JVM which is used to run Java Programs
-		- Like servlet container which is used to run servlets
-		- Like EJB container which provides the run-time environment for enterprise beans
-		- Same Spring container is the place where bean objects are managed
-		
-	= The main responsibilites of Spring container are :-
-		1. It is used to instantiate, initialize and wire up the bean objects
-		2. It manages the bean life cycle
-		
-	= Types of Spring Containers ?
-		1. BeanFactory Container
-		2. ApplicationContext Container
-		
-	= Working of Spring Container :-
-		
-		
-===============================
-
-=> Working of BeanFactory container :-
-	
-	
-=============================
-
-=> ApplicationContext Container :-
-	= ApplicationContext is also a Spring Container that contains the collection of bean objects
-	= It is advanced level spring container as compared to BeanFactory
-	
-	= ApplicationContext is used to create bean objects, then initialize the bean and return
-                  it whenever asked by client/user (it has many more extra working as compared to BeanFactory)
-	
-	= ApplicationContext is an interface which is present in "org.springframework.context" package
-	= ApplicationContext inherits BeanFactory interface (indirectly)
-	
-	
-=> Hierarchy of Spring Containers :-
-
-
-=> Working of ApplicationContext :-
-	
-	
-=> Difference between BeanFactory and ApplicationContext :-
-	1. BeanFactory is the fundamental spring container
-	   ApplicationContext is an advanced container which provides all the functionalities of BeanFactory with additional features
-	2. BeanFactory will create the bean object when we call getBean(-) method and thus it is known as 
-	   "Lazy Initialization"
-	   ApplicationContext will create the bean object at the time of startup and thus it is known as "Eager Initialization"
-	3. BeanFactory is suitable for Standalone Applications
-	   ApplicationContext is suitable for Enterprise Applications
-	4. BeanFactory supports only Singleton and Prototype bean scope
-	   ApplicationContext supports all the bean scopes i.e. Singleton, Prototype, Request, Session etc
-	5. BeanFactory does not support I18N functionality
-	   ApplicationContext supports I18N functionality
-	6. BeanFactory does not support AOP module and ORM
-	   ApplicationContext supports AOP module and ORM
-	7. BeanFactory does not support Annotation. Thus in bean autowiring we have to provide the 
-	   configurations in XML file only
-	   ApplicationContext supports Annotation
-	   
 
 
 

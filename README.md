@@ -198,14 +198,28 @@ Introduction
 		
 
 
-
+--SpringContainerHeirarchy
 	
 	![Spring_Containers_Hierarchy_lyst9263](https://github.com/Nishita-Maheshwari/SpringCore/assets/47790697/7efd2ac5-a833-4b5b-901f-6ed1a7f054d3)
+
+
+
+ --ApplicationContext
 
  ![ApplicationContext_internal_Working_lyst5415](https://github.com/Nishita-Maheshwari/SpringCore/assets/47790697/c98eaf8c-de60-4153-9f0f-07a853db90e7)
 
 
+
+
+ ---BeanFactory	
+ 
+
+
 ![BeanFactory_internal_Working_lyst3598](https://github.com/Nishita-Maheshwari/SpringCore/assets/47790697/e88cde2c-cf88-474a-9a5a-1cdf2ac77075)
+
+
+
+----
 
 
 ![Spring_Container_lyst9344](https://github.com/Nishita-Maheshwari/SpringCore/assets/47790697/daeffadd-36b7-4656-9662-7a304569b25d)
